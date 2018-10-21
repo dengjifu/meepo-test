@@ -1,6 +1,7 @@
 package com.tuya.txc.dubbo;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -50,7 +51,12 @@ public class StockServiceImpl implements StockService {
     public Integer getSum() {
 
         System.out.println("getSum is called.");
-        Integer sum = jdbcTemplate.queryForObject("select IF(ISNULL(SUM(amount)), 0, SUM(amount)) from stock", java.lang.Integer.class);
+        Integer sum = null;
+        try {
+            sum = jdbcTemplate.queryForObject("select IF(ISNULL(SUM(amount)), 0, SUM(amount)) from stock", Integer.class);
+        } catch (DataAccessException e) {
+            e.printStackTrace();
+        }
         System.out.println("sum:" + sum);
         return sum;
     }
