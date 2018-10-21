@@ -118,7 +118,7 @@
       <find>schemaName</find>
       <find>tableName</find>
       <find>txc_undo_log</find>
-      <find>XA START</find>
+      <find />
       <find>com.taobao.txc.resourcemanager.b</find>
       <find>TxcRuntimeContext</find>
       <find>post</find>
@@ -126,18 +126,18 @@
       <find>execute</find>
       <find>doInConnection</find>
       <find>10000</find>
-      <find>client mode</find>
+      <find />
       <find>enlistResource</find>
       <find>TransactionBeanFactory</find>
       <find>TransactionBeanFactoryImpl</find>
       <find>ProtocolConfig</find>
-      <find>private boolean enlistResource(XAResourceArchive archive, int flag)</find>
+      <find />
       <find>standalone</find>
       <find>threadName=</find>
-      <find>Data locked by other,retry</find>
+      <find />
       <find>lockCurrent</find>
       <find>Random</find>
-      <find>product id</find>
+      <find />
       <find>bytejta</find>
       <find>netty</find>
       <find>invokeWithin</find>
